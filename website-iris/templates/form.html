@@ -1,0 +1,22 @@
+<h2>Iris detector</h2>
+<h3>Please enter your flower mesurements below : </h3>
+<form  method="POST">
+
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+      <table>
+        <tr>
+          <td>{{ form.sep_len.label }}</td><td>{{form.sep_len}}</td>
+        </tr>
+        <tr>
+          <td>{{ form.sep_wid.label}}</td><td>{{form.sep_wid}}</td>
+        </tr>
+        <tr>
+          <td>{{form.pet_len.label}}</td><td>{{form.pet_len}}</td>
+        </tr>
+        <tr>
+          <td>{{form.pet_wid.label}}</td><td>{{form.pet_wid}}</td>
+      </tr>
+    </table>
+    {{ form.submit() }}
+</form>
